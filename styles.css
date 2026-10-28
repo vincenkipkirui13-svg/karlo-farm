@@ -18,3 +18,8 @@
 .item-photo-preview{display:flex;gap:7px;flex-wrap:wrap;align-items:center;max-width:100%;overflow:hidden}
 .item-photo-preview img{display:block;width:68px;height:58px;max-width:68px;object-fit:contain;object-position:center;background:#e8eee5;border-radius:5px;flex:0 0 68px}
 @media(max-width:680px){.product-card .card-photo .card-main-photo{height:150px;max-height:150px}.product-card .card-photo .card-photo-thumb{height:40px}.product-card .card-photo{gap:5px;padding:6px}}
+
+/* Explicit full-image fit: keep uploaded hero, main, and thumbnail photos uncropped. */
+.hero:not(.hero-background-empty){background-size:contain!important;background-position:center center!important;background-repeat:no-repeat!important;background-color:#284d31!important}
+.product-card .card-photo .card-main-photo{object-fit:contain!important;object-position:center!important;width:100%!important;background:#edf2e9!important}
+.product-card .card-photo .card-photo-thumb img{object-fit:contain!important;object-position:center!important;width:100%!important;height:100%!important;background:#edf2e9!important}

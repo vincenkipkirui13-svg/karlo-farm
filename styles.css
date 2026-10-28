@@ -352,3 +352,7 @@
   .about-gallery .about-main .card-main-photo-frame{flex-basis:220px!important;height:220px!important;min-height:220px!important}
   .about-gallery .thumb-row{grid-template-columns:repeat(4,minmax(0,1fr))!important}
 }
+
+
+/* Compact feeds, seeds and fertilizer price table directly below About. */
+.feed-table-wrap{max-width:900px}.feed-table-scroll{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:#fff}.feed-price-table{width:100%;border-collapse:collapse;font-size:14px}.feed-price-table th,.feed-price-table td{padding:10px 16px;text-align:left;border-bottom:1px solid var(--line)}.feed-price-table th{background:#eaf2e7;color:var(--green);font-weight:850}.feed-price-table td:last-child,.feed-price-table th:last-child{white-space:nowrap;text-align:right;font-weight:800}.feed-price-table tbody tr:last-child td{border-bottom:0}.feed-price-table tbody tr:nth-child(even){background:#fafcf9}.feed-inquire{margin-top:15px}@media(max-width:680px){.feed-price-table{font-size:13px}.feed-price-table th,.feed-price-table td{padding:9px 12px}}

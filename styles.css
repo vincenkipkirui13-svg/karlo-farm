@@ -24,29 +24,46 @@
 .product-card .card-photo .card-main-photo{object-fit:contain!important;object-position:center!important;width:100%!important;background:#edf2e9!important}
 .product-card .card-photo .card-photo-thumb img{object-fit:contain!important;object-position:center!important;width:100%!important;height:100%!important;background:#edf2e9!important}
 
-/* Natural photo proportions: fill frames smoothly without stretching. */
-.hero:not(.hero-background-empty){
-  background-size:cover!important;
+/* Clear, natural photo display: no stretching, gentle brightness, and a taller hero. */
+.hero{
+  min-height:520px!important;
+  padding-top:62px!important;
+  padding-bottom:58px!important;
   background-position:center center!important;
-  background-repeat:no-repeat!important;
-  background-color:#284d31!important
+  background-size:cover!important;
+  background-repeat:no-repeat!important
 }
+.hero:not(.hero-background-empty)::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,.07);
+  pointer-events:none;
+  z-index:0
+}
+.hero-copy{position:relative;z-index:1}
+.hero:not(.hero-background-empty) .hero-copy{ text-shadow:0 1px 8px rgba(0,0,0,.08) }
 .product-card .card-photo .card-main-photo{
-  object-fit:cover!important;
+  object-fit:contain!important;
   object-position:center center!important;
   width:100%!important;
-  height:175px!important;
-  max-height:175px!important;
-  border-radius:5px;
-  background:#edf2e9!important
+  height:205px!important;
+  max-height:205px!important;
+  background:#f5f7f2!important;
+  filter:brightness(1.06) contrast(1.04) saturate(1.06);
+  border-radius:5px
 }
 .product-card .card-photo .card-photo-thumb img{
-  object-fit:cover!important;
+  object-fit:contain!important;
   object-position:center center!important;
   width:100%!important;
   height:100%!important;
-  background:#edf2e9!important
+  background:#f5f7f2!important;
+  filter:brightness(1.05) contrast(1.04) saturate(1.05)
 }
 @media(max-width:680px){
-  .product-card .card-photo .card-main-photo{height:150px!important;max-height:150px!important}
+  .hero{min-height:460px!important;padding:44px 5% 38px!important;gap:24px!important}
+  .hero h1{font-size:clamp(38px,10vw,45px)!important}
+  .main-photo{height:260px!important}
+  .product-card .card-photo .card-main-photo{height:170px!important;max-height:170px!important}
 }

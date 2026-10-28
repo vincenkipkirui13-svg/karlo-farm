@@ -24,8 +24,29 @@
 .product-card .card-photo .card-main-photo{object-fit:contain!important;object-position:center!important;width:100%!important;background:#edf2e9!important}
 .product-card .card-photo .card-photo-thumb img{object-fit:contain!important;object-position:center!important;width:100%!important;height:100%!important;background:#edf2e9!important}
 
-/* Fill each photo frame edge-to-edge as requested, without cropping. */
-.hero:not(.hero-background-empty){background-size:100% 100%!important;background-position:center center!important;background-repeat:no-repeat!important;background-color:#284d31!important}
-.product-card .card-photo .card-main-photo{object-fit:fill!important;object-position:center!important;width:100%!important;height:175px!important;max-height:175px!important;border-radius:5px}
-.product-card .card-photo .card-photo-thumb img{object-fit:fill!important;object-position:center!important;width:100%!important;height:100%!important}
-@media(max-width:680px){.product-card .card-photo .card-main-photo{height:150px!important;max-height:150px!important}}
+/* Natural photo proportions: fill frames smoothly without stretching. */
+.hero:not(.hero-background-empty){
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  background-color:#284d31!important
+}
+.product-card .card-photo .card-main-photo{
+  object-fit:cover!important;
+  object-position:center center!important;
+  width:100%!important;
+  height:175px!important;
+  max-height:175px!important;
+  border-radius:5px;
+  background:#edf2e9!important
+}
+.product-card .card-photo .card-photo-thumb img{
+  object-fit:cover!important;
+  object-position:center center!important;
+  width:100%!important;
+  height:100%!important;
+  background:#edf2e9!important
+}
+@media(max-width:680px){
+  .product-card .card-photo .card-main-photo{height:150px!important;max-height:150px!important}
+}

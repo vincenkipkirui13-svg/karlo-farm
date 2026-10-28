@@ -1,0 +1,1 @@
+{"name":"kalro-farm","version":"1.0.0","private":true,"description":"Kalro Farm website with secure admin and Vercel Blob storage","dependencies":{"@vercel/blob":"^1.1.1"}}

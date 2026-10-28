@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#1d5c36">
+  <title>Admin | kalro farm</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+  <div class="topline">KALRO FARM • SECURE ADMINISTRATION</div>
+  <main class="admin-shell">
+    <header class="admin-head">
+      <div class="brand">
+        <span class="brand-mark">KF</span>
+        <span><strong>kalro farm</strong><small>Website administration</small></span>
+      </div>
+      <a class="btn btn-light" href="index.html">← View website</a>
+    </header>
+    <section class="admin-lock" id="loginPanel">
+      <h2>Admin sign in</h2>
+      <p>Sign in to manage business details, catalogue items and your own farm photos.</p>
+      <form id="loginForm" class="admin-form" style="grid-template-columns:1fr">
+        <label>Password
+          <input id="adminPassword" type="password" name="password" required autocomplete="current-password" placeholder="Enter admin password">
+        </label>
+        <button class="btn btn-primary" type="submit">Sign in securely</button>
+      </form>
+      <p id="loginMessage" class="admin-status" role="status" aria-live="polite"></p>
+      <a href="index.html" class="text-link">← Return to public website</a>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="admin-head">
+        <div><h1>Website Admin</h1><p>Changes are saved to shared storage and appear on the public website.</p></div>
+        <button class="btn btn-light" id="logoutButton" type="button">Sign out</button>
+      </div>
+      <div class="admin-layout">
+        <aside class="admin-nav" aria-label="Admin sections">
+          <button type="button" class="admin-tab active" data-tab="settings">Business details</button>
+          <button type="button" class="admin-tab" data-tab="photos">Photo gallery</button>
+          <button type="button" class="admin-tab" data-tab="livestock">Livestock</button>
+          <button type="button" class="admin-tab" data-tab="products">Farm products</button>
+        </aside>
+        <section class="admin-panel" id="adminPanel" aria-live="polite"></section>
+      </div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -178,3 +178,86 @@
   .product-card .card-photo,
   .product-card .card-photo.empty-photo{height:170px!important;min-height:170px!important}
 }
+
+/* Final correction: hero background fills its entire section; photo thumbnails sit below the main image. */
+#home.hero{
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  min-height:520px!important;
+}
+.product-card .card-photo{
+  display:flex!important;
+  flex-direction:column!important;
+  height:auto!important;
+  min-height:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  gap:0!important;
+}
+.product-card .card-photo .card-main-photo-frame{
+  display:block!important;
+  position:relative!important;
+  flex:0 0 205px!important;
+  width:100%!important;
+  height:205px!important;
+  min-height:205px!important;
+  overflow:hidden!important;
+  background:#edf2e9!important;
+}
+.product-card .card-photo .card-main-photo{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.product-card .card-photo .card-photo-thumbs{
+  position:static!important;
+  inset:auto!important;
+  display:flex!important;
+  flex-wrap:nowrap!important;
+  gap:7px!important;
+  width:100%!important;
+  padding:8px!important;
+  margin:0!important;
+  background:#fff!important;
+  border-top:1px solid #e1e8df!important;
+  overflow-x:auto!important;
+}
+.product-card .card-photo .card-photo-thumb{
+  position:relative!important;
+  display:block!important;
+  flex:0 0 54px!important;
+  width:54px!important;
+  height:44px!important;
+  padding:0!important;
+  border:1px solid #d8e2d5!important;
+  border-radius:5px!important;
+  overflow:hidden!important;
+  background:#edf2e9!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+}
+.product-card .card-photo .card-photo-thumb img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.product-card .card-photo .card-photo-thumb.active{border:2px solid #1d5c36!important}
+.product-card .card-photo.empty-photo{
+  display:flex!important;
+  height:205px!important;
+  min-height:205px!important;
+}
+@media(max-width:680px){
+  #home.hero{min-height:460px!important}
+  .product-card .card-photo .card-main-photo-frame{
+    flex-basis:170px!important;height:170px!important;min-height:170px!important;
+  }
+  .product-card .card-photo.empty-photo{height:170px!important;min-height:170px!important}
+}

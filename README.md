@@ -1,12 +1,12 @@
-# Kalro Farm website
+# kalro farm website
 
-Responsive farm marketplace website with livestock categories, poultry and fish, feeds, seeds and fertilizer, WhatsApp inquiries, secure admin login, and persistent Vercel Blob storage for catalogue data and photos.
+Responsive livestock and farm-products catalogue matching the public reference website, including a photo-background hero, WhatsApp inquiries, the exact reference livestock/products and admin-managed photos.
 
 ## Admin
-Open `/admin.html`. Access is protected by the Vercel environment variables `ADMIN_PASSWORD` and `ADMIN_SESSION_SECRET`. Do not commit credentials to this repository.
+Open `/admin.html`. Login uses the Vercel environment variables `ADMIN_PASSWORD` and `ADMIN_SESSION_SECRET`. Keep credentials private.
 
 ## Storage
-The `BLOB_READ_WRITE_TOKEN` environment variable is provided by the connected Vercel Blob store. Catalogue edits are stored in `kalro-farm/site-data.json`; uploaded photos are stored in Blob and shared across visitors/devices.
+The `BLOB_READ_WRITE_TOKEN` environment variable connects Vercel Blob. Catalogue changes are saved in `kalro-farm/site-data.json`; uploaded photos are stored in Blob and shared across devices.
 
-## Local development
-Install dependencies with `npm install` and run with the Vercel CLI so the `/api` routes and Blob integration are available.
+## Photos
+The hero background is managed from Admin > Photo gallery. Upload the hero image there; the headline, description and call/WhatsApp buttons stay overlaid on it. Product/livestock photos can also be managed from the admin page.
